@@ -28,6 +28,10 @@ export default async (req, res) => {
     const data = await response.json();
     res.status(200).json({ code: data.choices[0].message.content });
   } catch (error) {
-    res.status(500).json({ error: "Erro ao gerar código" });
-  }
+    res.status(500).json({ error: "Erro ao gerar código" 
+    export default async (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST');
+  // Restante do código...
+  }                       
 };
